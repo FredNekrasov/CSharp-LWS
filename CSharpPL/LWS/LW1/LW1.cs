@@ -1,4 +1,4 @@
-namespace CSharpPL.LWS;
+namespace CSharpPL.LWS.LW1;
 
 public static class LW1
 {
@@ -53,20 +53,23 @@ public static class LW1
             Console.Write("|");
             for (var j = 0; j < n; j++)
             {
-                matrix[i, j] = rand.Next(0, 10);
-                Console.Write($" {matrix[i, j]} |");
+                matrix[i, j] = rand.Next(-100, 100);
+                Console.Write($" {matrix[i, j]}\t|");
             }
             Console.WriteLine();
         }
         int sum = 0, count = 0;
         for (var i = 0; i < n; i++)
         {
-            for (var j = 0; j < n - i; j++)
+            Console.Write("|");
+            for (var j = 0; j < n - (i + 1); j++)
             {
+                Console.Write($" {matrix[i, j]}\t|");
                 if (matrix[i, j] % 2 != 0) continue;
                 sum += matrix[i, j];
                 count++;
             }
+            Console.WriteLine();
         }
         Console.WriteLine($"Сумма четных элементов: {sum}");
         Console.WriteLine($"Количество четных элементов: {count}");

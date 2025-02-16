@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using CSharpPL.LWS;
+using CSharpPL.LWS.LW1;
 
 Console.WriteLine("Hello, World!");
 LW1.LW1T1();
